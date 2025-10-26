@@ -105,7 +105,7 @@
 # Hacktoberfest 2025 Bash Challenge - Steps
 
 1. **Pick Questions**  
-   Click the provided link and get **3 question IDs** you want to solve.
+   [Click the provided link](https://script.google.com/macros/s/AKfycbzSF9CntU7DELQkbCX3HVjxF3U2Iyl2cjo74d8doHY8gjohCgWi9aWqSMI8iOrdbxI/exec) and get **3 question IDs** you want to solve.
 
 2. **Fork Repository**  
    Fork the main repository to your GitHub account.
