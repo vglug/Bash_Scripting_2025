@@ -1,0 +1,9 @@
+#!/bin/bash
+
+read -p "Enter a number: " num
+
+if [ $num -lt 0 ]; then
+  num=$(( -1 * num ))
+fi
+
+echo "Positive number: $num"
