@@ -1,3 +1,4 @@
+#!bin/bash
 echo "Enter first angle:"
 read a
 echo "Enter second angle:"
