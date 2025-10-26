@@ -1,6 +1,7 @@
-
-read -p "Enter first number: " a
-read -p "Enter second number: " b
+#reàd two input 
+read -p "Enter first number: " a #input a
+read -p "Enter second number: " b #input b
+#Euclidean  algorithm 
 while [ $b -ne 0 ]
 do
     temp=$b
