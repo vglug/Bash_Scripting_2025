@@ -127,4 +127,4 @@
    Make **pull requests again, one by one**, for the updated comments/documentation.
 
 7. **Completion**  
-   Once all **6 pull requests are merged**, Hacktoberfest 2025 will be completed and updated on the Hacktoberfest site.
+   Once all **6 pull requests are merged**, Hacktoberfest 2025 will be completed and updated on the [Hacktoberfest site](https://hacktoberfest.com/).
