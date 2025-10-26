@@ -1,0 +1,28 @@
+read -p "Enter the starting number: " start
+read -p "Enter the ending number: " end
+
+echo "Armstrong numbers between $start and $end are:"
+
+for (( num=$start; num<=$end; num++ ))
+do
+    # Convert number to string to count digits
+    n=$num
+    digits=${#n}
+    sum=0
+    temp=$num
+    while [ $temp -gt 0 ]
+    do
+        digit=$(( temp % 10 ))
+        pow=1
+        for (( i=1; i<=$digits; i++ ))
+        do
+            pow=$(( pow * digit ))
+        done
+        sum=$(( sum + pow ))
+        temp=$(( temp / 10 ))
+    done
+    if [ $sum -eq $num ]
+    then
+        echo "$num"
+    fi
+done
