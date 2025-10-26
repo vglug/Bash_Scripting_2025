@@ -1,6 +1,5 @@
 #!/bin/bash
 # Program: Check if a number is a palindrome
-# Description: Reverse the number and check if it matches the original
 
 echo "Enter a number:"
 read num
