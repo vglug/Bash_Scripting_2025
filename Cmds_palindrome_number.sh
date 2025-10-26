@@ -5,15 +5,16 @@
 echo "Enter a number:"
 read num
 
+# Store the original number
 original=$num
 rev=0
 
 # Reverse the number
 while [ $num -gt 0 ]
 do
-    rem=$((num % 10))
-    rev=$((rev * 10 + rem))
-    num=$((num / 10))
+    rem=$((num % 10)) # Get last digit
+    rev=$((rev * 10 + rem)) # Build reversed number
+    num=$((num / 10)) # Remove last digit
 done
 
 # Check if palindrome
