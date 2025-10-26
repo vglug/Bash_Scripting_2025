@@ -6,8 +6,8 @@ read -p "Enter second number: " b
 
 # Function to find GCD using Euclidean algorithm
 gcd() {
-    local x=$1
-    local y=$2
+    local x=$1# Declaring a local variable x
+    local y=$2# Declaring a local variable y
     while [ $y -ne 0 ]; do
         local temp=$y
         y=$((x % y))
