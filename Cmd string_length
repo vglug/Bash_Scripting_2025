@@ -1,0 +1,18 @@
+#!/bin/bash
+# Program: Find length of a string
+# Description: Use parameter expansion to find string length
+
+# Check if string is provided as an argument
+if [ $# -eq 0 ]; then
+  #printing the string
+  echo "Enter a string:"
+  read str
+else
+  str=$1
+fi
+
+# Find length using parameter expansion
+length=${#str}
+
+#print statement 
+echo "Length of the string: $length"
