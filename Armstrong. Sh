@@ -1,5 +1,6 @@
-read -p "Enter the starting number: " start
-read -p "Enter the ending number: " end
+#read the two input
+read -p "Enter the starting number: " start#read starting num
+read -p "Enter the ending number: " end# #read end end num
 
 echo "Armstrong numbers between $start and $end are:"
 
@@ -10,6 +11,7 @@ do
     digits=${#n}
     sum=0
     temp=$num
+# calulate sum of each digits
     while [ $temp -gt 0 ]
     do
         digit=$(( temp % 10 ))
