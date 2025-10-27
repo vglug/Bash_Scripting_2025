@@ -1,0 +1,16 @@
+#!/bin/bash
+# Program: Reverse a string
+# Description: Use loop or command substitution to reverse characters
+
+# Check if string is provided as an argument
+if [ $# -eq 0 ]; then
+  echo "Enter a string:"
+  read str
+else
+  str=$1
+fi
+
+# Method 1: Using command substitution
+rev_str=$(echo "$str" | rev)
+
+echo "Reversed string: $rev_str"
