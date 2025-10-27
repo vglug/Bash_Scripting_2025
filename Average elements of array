@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Define an array
+arr=(10 20 30 40 50)
+
+# Initialize sum
+sum=0
+
+# Loop through array elements
+for num in "${arr[@]}"; do
+  ((sum += num))
+done
+
+# Count number of elements
+count=${#arr[@]}
+
+# Compute average (floating point using bc)
+average=$(echo "$sum / $count" | bc -l)
+
+# Print results
+echo "Array: ${arr[@]}"
+echo "Sum: $sum"
+echo "Count: $count"
+echo "Average: $average"
