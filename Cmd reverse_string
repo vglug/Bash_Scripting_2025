@@ -1,0 +1,18 @@
+```
+bash
+#!/bin/bash  # Shebang line specifying the interpreter to use
+
+if [ $# -eq 0 ]; then  # Check if no command-line arguments are provided
+  echo "Enter a string:"  # Prompt user to enter a string
+  read str  # Read user input and store it in variable 'str'
+else  # If command-line argument is provided
+  str=$1  # Assign the first command-line argument to variable 'str'
+
+len=${#str}  # Calculate the length of the string and store it in 'len'
+rev_str=""  # Initialize an empty string 'rev_str' to store the reversed string
+for ((i=$len-1; i>=0; i--)); do  # Loop from the last character index to the first
+  rev_str="$rev_str${str:$i:1}"  # Append each character to 'rev_str' in reverse order
+done  # End of the loop
+
+echo "Reversed string: $rev_str"  # Print the reversed string
+```
