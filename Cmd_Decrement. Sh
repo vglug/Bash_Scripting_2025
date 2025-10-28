@@ -1,0 +1,7 @@
+#read the input
+read -p "Enter a number: " n#input n
+#loop through n down to 1
+for (( i = n; i >= 1; i-- ))
+do
+  echo "Value: $i"
+done
