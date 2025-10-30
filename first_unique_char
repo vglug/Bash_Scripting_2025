@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# Read string input
+read -p "Enter a string: " str
+
+# Get length of string
+len=${#str}
+
+found=0
+
+# Outer loop to check each character
+for (( i=0; i<$len; i++ ))
+do
+    count=0
+    char=${str:i:1}
+
+    # Skip spaces
+    if [[ "$char" == " " ]]; then
+        continue
+    fi
+
+    # Inner loop to compare with every other character
+    for (( j=0; j<$len; j++ ))
+    do
+        if [[ ${str:j:1} == $char ]]; then
+            ((count++))
+        fi
+    done
+
+    # If count is 1, it's the first non-repeating character
+    if [[ $count -eq 1 ]]; then
+        echo "First non-repeating character: $char"
+        found=1
+        break
+    fi
+done
+
+# If no unique character found
+if [[ $found -eq 0 ]]; then
+    echo "No non-repeating character found."
+fi
