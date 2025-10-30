@@ -1,0 +1,14 @@
+#!/bin/bash
+
+input="Bash"
+
+count_wc=$(echo -n "$input" | wc -c)
+
+count_loop=0
+for (( i=0; i<${#input}; i++ )); do
+  ((count_loop++))
+done
+
+echo "Input string: $input"
+echo "Character count using wc: $count_wc"
+echo "Character count using loop: $count_loop"
