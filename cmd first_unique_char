@@ -1,0 +1,54 @@
+#!/bin/bash
+# ---------------------------------------------------------
+# Program: Find First Non-Repeating Character in a String
+# File Name: first_unique_char.sh
+# Description:
+#   This script reads a string from the user and uses
+#   nested loops to find the first character that appears
+#   only once in the string.
+# ---------------------------------------------------------
+
+# Prompt user to enter a string
+read -p "Enter a string: " str
+
+# Get length of the string
+len=${#str}
+
+# Variable to track if a unique character is found
+found=0
+
+# Outer loop: iterate through each character in the string
+for (( i=0; i<$len; i++ ))
+do
+    # Initialize count for each character
+    count=0
+
+    # Extract the current character at position i
+    char=${str:i:1}
+
+    # Skip checking if the character is a space
+    if [[ "$char" == " " ]]; then
+        continue
+    fi
+
+    # Inner loop: compare the selected character with all others
+    for (( j=0; j<$len; j++ ))
+    do
+        # If characters match, increase the count
+        if [[ ${str:j:1} == $char ]]; then
+            ((count++))
+        fi
+    done
+
+    # If count is 1, it means this character is unique
+    if [[ $count -eq 1 ]]; then
+        echo "First non-repeating character: $char"
+        found=1
+        break
+    fi
+done
+
+# If no unique character is found after the loops
+if [[ $found -eq 0 ]]; then
+    echo "No non-repeating character found."
+fi
