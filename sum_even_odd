@@ -1,0 +1,30 @@
+#!/bin/bash
+# ------------------------------------------------------
+# Program: sum_even_odd.sh
+# Description: Accumulate sums separately for even and odd numbers up to N.
+# ------------------------------------------------------
+
+# Read the limit value N from user
+read -p "Enter the value of N: " N
+
+# Initialize sum variables
+even_sum=0
+odd_sum=0
+
+# Loop from 1 to N
+for (( i=1; i<=N; i++ ))
+do
+    # Check if number is even
+    if (( i % 2 == 0 ))
+    then
+        # Add to even sum
+        even_sum=$((even_sum + i))
+    else
+        # Add to odd sum
+        odd_sum=$((odd_sum + i))
+    fi
+done
+
+# Display the results
+echo "Sum of even numbers up to $N = $even_sum"
+echo "Sum of odd numbers up to $N  = $odd_sum"
