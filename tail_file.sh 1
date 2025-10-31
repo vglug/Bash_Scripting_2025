@@ -1,0 +1,20 @@
+#!/bin/bash
+# tail_file.sh - Display last 5 lines of a file (alternate version)
+
+# Check if filename is given
+if [ $# -lt 1 ]; then
+    echo "Usage: $0 <filename>"
+    exit 1
+fi
+
+file=$1
+
+# Check if file exists
+if [ ! -f "$file" ]; then
+    echo "Error: File '$file' not found!"
+    exit 1
+fi
+
+# Display last 5 lines using awk
+echo "Last 5 lines of $file:"
+awk 'NR>=(count-4){print} {count=NR}' "$file"
